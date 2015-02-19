@@ -65,17 +65,44 @@ final class Pojo_News_Ticker {
 		return self::$_instance;
 	}
 
-	public function bootstrap() {
-		// This plugin for Pojo Themes..
-		// TODO: Add notice for non-pojo theme
-		if ( ! class_exists( 'Pojo_Core' ) )
-			return;
-		
+	public function admin_notices() {
+		echo '<div class="error"><p>' . sprintf( __( '<a href="%s" target="_blank">Pojo Framework</a> is not active. Please activate any theme by Pojo before you are using "Pojo News Ticker" plugin.', 'pojo-news-ticker' ), 'http://pojo.me/' ) . '</p></div>';
 	}
 
+	public function bootstrap() {
+		// This plugin for Pojo Themes..
+		if ( ! class_exists( 'Pojo_Core' ) ) {
+			add_action( 'admin_notices', array( &$this, 'admin_notices' ) );
+			return;
+		}
+
+		add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ), 200 );
+	}
+
+	public function enqueue_scripts() {
+		wp_register_script( 'pojo-news-ticker', POJO_NEWS_TICKER_ASSETS_URL . 'js/app.min.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'pojo-news-ticker' );
+	}
+
+	public function register_widget() {
+		if ( ! class_exists( 'Pojo_Widget_Base' ) )
+			return;
+		
+		include( 'widgets/class-pojo-widget-news-ticker.php' );
+		register_widget( 'Pojo_Widget_News_Ticker' );
+	}
+
+	public function register_widget_builder( $widgets ) {
+		$widgets[] = 'Pojo_Widget_News_Ticker';
+		return $widgets;
+	}
+	
 	private function __construct() {
 		add_action( 'init', array( &$this, 'bootstrap' ), 100 );
 		add_action( 'plugins_loaded', array( &$this, 'load_textdomain' ) );
+
+		add_action( 'pojo_widgets_registered', array( &$this, 'register_widget' ) );
+		add_action( 'pb_page_builder_widgets', array( &$this, 'register_widget_builder' ) );
 	}
 
 }

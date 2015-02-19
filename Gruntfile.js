@@ -81,6 +81,44 @@ module.exports = function( grunt ) {
 				],
 				expand: true
 			}
+		},
+
+		jshint: {
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			all: [
+				'Gruntfile.js',
+				'assets/js/dev/app.dev.js',
+				'assets/js/dev/jquery.pojo-news-ticker.dev.js'
+			]
+		},
+
+		uglify: {
+			pkg: grunt.file.readJSON( 'package.json' ),
+			options: {},
+			dist: {
+				files: {
+					'assets/js/app.min.js': [
+						'assets/js/dev/jquery.pojo-news-ticker.dev.js',
+						'assets/js/dev/app.dev.js'
+					]
+				}
+			}
+		},
+
+		watch: {
+			js: {
+				files: [
+					'**/*.js',
+					'!**/*.min.js'
+				],
+				tasks: [
+					'jshint',
+					'uglify'
+				],
+				options: {}
+			}
 		}
 		
 	} );
