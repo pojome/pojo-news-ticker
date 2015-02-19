@@ -35,7 +35,6 @@
 						self.running = true;
 					} );
 			}
-			
 			setInterval( function() {
 				if ( ! self.running ) {
 					return;
