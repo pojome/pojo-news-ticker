@@ -102,7 +102,7 @@ final class Pojo_News_Ticker {
 		add_action( 'plugins_loaded', array( &$this, 'load_textdomain' ) );
 
 		add_action( 'pojo_widgets_registered', array( &$this, 'register_widget' ) );
-		add_action( 'pb_page_builder_widgets', array( &$this, 'register_widget_builder' ) );
+		add_action( 'pojo_builder_widgets', array( &$this, 'register_widget_builder' ) );
 	}
 
 }
