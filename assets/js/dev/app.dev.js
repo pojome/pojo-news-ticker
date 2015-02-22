@@ -17,7 +17,7 @@
 		buildElements: function() {},
 
 		bindEvents: function() {
-			$( 'ul.pojo-news-ticker' ).each( function() {
+			$( 'ul.ticker-items' ).each( function() {
 				$( this ).pojoNewsTicker( $( this ).data( 'ticker_options' ) );
 			} );
 		},

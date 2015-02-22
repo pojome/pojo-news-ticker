@@ -7,7 +7,8 @@
 		defaults = {
 			effect: 'fade',
 			delay: 2000,
-			pauseHover: true
+			pauseHover: true,
+			typingDelay: 50
 		};
 
 	function Plugin( element, options ) {
@@ -35,6 +36,54 @@
 						self.running = true;
 					} );
 			}
+			
+			if ( 'typing' === self.settings.effect ) {
+				var currentContentIndex = 0;
+				var currentItemIndex = 0;
+				var timeoutAfterEndLine = 0;
+				var inEndLine = false;
+				var items = [];
+				$children.each( function() {
+					var content = $( this ).html();
+					items.push( {
+						html: content,
+						content: $( this ).find( 'span.ticker-content' ).text()
+					} );
+				} );
+				
+				$elem.on( 'mouseenter', function() {
+					currentContentIndex = items[currentItemIndex].content.length;
+				} );
+				
+				var count = items.length;
+				setInterval( function() {
+					if ( inEndLine ) {
+						if ( timeoutAfterEndLine < self.settings.typingDelay ) {
+							timeoutAfterEndLine++;
+							return;
+						}
+						timeoutAfterEndLine = 0;
+						currentContentIndex = 0;
+						currentItemIndex++;
+						if ( count === currentItemIndex ) {
+							currentItemIndex = 0;
+						}
+						inEndLine = false;
+						return;
+					}
+					var currentContentResult = items[currentItemIndex].content.substring( 0, currentContentIndex ),
+						$currentHtml = $( items[currentItemIndex].html );
+					
+					$currentHtml.find( 'span.ticker-content' ).text( currentContentResult );
+					
+					$( $elem ).html( $currentHtml );
+					currentContentIndex++;
+					if ( currentContentIndex > items[currentItemIndex].content.length ) {
+						inEndLine = true;
+					}
+				}, self.settings.delay );
+			}
+			
 			setInterval( function() {
 				if ( ! self.running ) {
 					return;
