@@ -208,7 +208,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 		parent::__construct(
 			'pojo_news_ticker',
 			__( 'News Ticker', 'pojo-news-ticker' ),
-			array( 'description' => __( 'Display ticker posts by category', 'pojo-news-ticker' ), )
+			array( 'description' => __( 'Display ticker posts by categories', 'pojo-news-ticker' ), )
 		);
 	}
 
