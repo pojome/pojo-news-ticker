@@ -35,6 +35,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'options' => array(
 				'fade' => __( 'Fade', 'pojo-news-ticker' ),
 				'slide' => __( 'Slide', 'pojo-news-ticker' ),
+				'typing' => __( 'Typing', 'pojo-news-ticker' ),
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
@@ -43,6 +44,14 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'ticker_delay',
 			'title' => __( 'Delay', 'pojo-news-ticker' ),
 			'std' => '2000',
+			'filter' => array( &$this, '_valid_number' ),
+		);
+
+		$this->_form_fields[] = array(
+			'id' => 'ticker_typing_delay',
+			'title' => __( 'Typing Delay', 'pojo-news-ticker' ),
+			'std' => '50',
+			'desc' => __( 'For Typing effect only', 'pojo' ),
 			'filter' => array( &$this, '_valid_number' ),
 		);
 		
@@ -166,24 +175,25 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			if ( $recent_posts->have_posts() ) :
 				$ticker_options = array(
 					'delay' => absint( $instance['ticker_delay'] ),
+					'typingDelay' => absint( $instance['ticker_typing_delay'] ),
 					'effect' => $instance['ticker_transition_style'],
-					'effect' => 'typing',
 					'pauseHover' => 'on' === $instance['ticker_pause_hover'],
 				);
 				
-				echo '<ul class="pojo-news-ticker" data-ticker_options=\'' . json_encode( $ticker_options ) . '\'>';
+				echo '<div class="pojo-news-ticker"><ul class="ticker-items" data-ticker_options=\'' . json_encode( $ticker_options ) . '\'>';
 				while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
-					echo '<li><a href="' . get_permalink() . '">';
-					if ( 'show' === $instance['metadata_date'] )
-						echo get_the_date();
+					echo '<li class="ticker-item"><a class="ticker-link" href="' . get_permalink() . '">';
+						if ( 'show' === $instance['metadata_date'] )
+							echo '<span class="ticker-date">' . get_the_date() . '</span>';
+						
+						if ( 'show' === $instance['metadata_time'] )
+							echo '<span class="ticker-time">' . get_the_time() . '</span>';
 					
-					if ( 'show' === $instance['metadata_time'] )
-						echo get_the_time();
+					echo '<span class="ticker-content">' . get_the_title() . '</span>';
 					
-					the_title();
 					echo '</a></li>';
 				endwhile;
-				echo '</ul>';
+				echo '</ul></div>';
 				
 				wp_reset_postdata();
 			else :
