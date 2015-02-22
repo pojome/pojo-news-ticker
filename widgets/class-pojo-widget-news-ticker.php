@@ -75,7 +75,8 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 		$this->_form_fields[] = array(
 			'id' => 'ticker_delay',
 			'title' => __( 'Delay', 'pojo-news-ticker' ),
-			'std' => '2000',
+			'std' => '5000',
+			'desc' => __( 'Ticker will rotate every X milliseconds', 'pojo' ),
 			'filter' => array( &$this, '_valid_number' ),
 		);
 
@@ -83,7 +84,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'ticker_typing_delay',
 			'title' => __( 'Typing Delay', 'pojo-news-ticker' ),
 			'std' => '50',
-			'desc' => __( 'For Typing effect only', 'pojo' ),
+			'desc' => __( 'For Typing effect only (in ms)', 'pojo' ),
 			'filter' => array( &$this, '_valid_number' ),
 		);
 		
@@ -105,8 +106,8 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'type' => 'select',
 			'std' => 'show',
 			'options' => array(
-				'show' => __( 'Show', 'pojo-news-ticker' ),
 				'hide' => __( 'Hide', 'pojo-news-ticker' ),
+				'show' => __( 'Show', 'pojo-news-ticker' ),
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
@@ -117,8 +118,8 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'type' => 'select',
 			'std' => 'show',
 			'options' => array(
-				'show' => __( 'Show', 'pojo-news-ticker' ),
 				'hide' => __( 'Hide', 'pojo-news-ticker' ),
+				'show' => __( 'Show', 'pojo-news-ticker' ),
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
