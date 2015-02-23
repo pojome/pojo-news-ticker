@@ -24,6 +24,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'posts_per_page',
 			'title' => __( 'Number Posts:', 'pojo-news-ticker' ),
 			'std' => get_option( 'posts_per_page' ),
+			'placeholder' => '10',
 			'filter' => array( &$this, '_valid_number' ),
 		);
 
@@ -76,6 +77,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'ticker_delay',
 			'title' => __( 'Delay', 'pojo-news-ticker' ),
 			'std' => '5000',
+			'placeholder' => '5000',
 			'desc' => __( 'Ticker will rotate every X milliseconds', 'pojo-news-ticker' ),
 			'filter' => array( &$this, '_valid_number' ),
 		);
@@ -83,7 +85,8 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 		$this->_form_fields[] = array(
 			'id' => 'ticker_typing_speed',
 			'title' => __( 'Typing Speed', 'pojo-news-ticker' ),
-			'std' => '50',
+			'std' => '75',
+			'placeholder' => '75',
 			'desc' => __( 'For Typing effect only (in ms)', 'pojo-news-ticker' ),
 			'filter' => array( &$this, '_valid_number' ),
 		);
