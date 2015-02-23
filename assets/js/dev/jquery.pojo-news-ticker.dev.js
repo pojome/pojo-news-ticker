@@ -40,11 +40,12 @@
 			}
 			
 			if ( 'typing' === self.settings.effect ) {
-				var currentContentIndex = 0;
-				var currentItemIndex = 0;
-				var timeoutAfterEndLine = 0;
-				var inEndLine = false;
-				var items = [];
+				var currentContentIndex = 0,
+					currentItemIndex = 0,
+					timeoutAfterEndLine = 0,
+					inEndLine = false,
+					items = [];
+				
 				$children.each( function() {
 					var content = $( this ).html();
 					items.push( {
@@ -57,7 +58,7 @@
 					currentContentIndex = items[currentItemIndex].content.length;
 				} );
 				
-				var count = items.length;
+				var maxItems = items.length;
 				setInterval( function() {
 					if ( inEndLine ) {
 						if ( timeoutAfterEndLine < self.settings.typingDelay ) {
@@ -67,7 +68,7 @@
 						timeoutAfterEndLine = 0;
 						currentContentIndex = 0;
 						currentItemIndex++;
-						if ( count === currentItemIndex ) {
+						if ( maxItems === currentItemIndex ) {
 							currentItemIndex = 0;
 						}
 						inEndLine = false;
@@ -83,7 +84,7 @@
 					if ( currentContentIndex > items[currentItemIndex].content.length ) {
 						inEndLine = true;
 					}
-				}, self.settings.delay );
+				}, self.settings.typingDelay );
 			}
 			
 			setInterval( function() {
