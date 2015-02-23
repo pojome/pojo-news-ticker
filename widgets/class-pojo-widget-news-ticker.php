@@ -256,7 +256,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			if ( $recent_posts->have_posts() ) :
 				$ticker_options = array(
 					'delay' => absint( $instance['ticker_delay'] ),
-					'typingDelay' => absint( $instance['ticker_typing_delay'] ),
+					'typingDelay' => absint( $instance['ticker_typing_speed'] ),
 					'effect' => $instance['ticker_transition_style'],
 					'pauseHover' => 'on' === $instance['ticker_pause_hover'],
 				);
