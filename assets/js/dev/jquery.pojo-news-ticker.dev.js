@@ -5,9 +5,15 @@
 ;(function ( $, window, document, undefined ) {
 	'use strict';
 	
+	var TRANSITION = {
+		FADE: 'fade',
+		SLIDE: 'slide',
+		TYPING: 'typing'
+	};
+	
 	var pluginName = "pojoNewsTicker",
 		defaults = {
-			effect: 'fade',
+			effect: TRANSITION.FADE,
 			delay: 2000,
 			pauseHover: true,
 			typingDelay: 50
@@ -39,10 +45,11 @@
 					} );
 			}
 			
-			if ( 'typing' === self.settings.effect ) {
+			if ( TRANSITION.TYPING === self.settings.effect ) {
 				var currentContentIndex = 0,
 					currentItemIndex = 0,
 					timeoutAfterEndLine = 0,
+					typingDelay = parseInt( self.settings.delay / self.settings.typingDelay ),
 					inEndLine = false,
 					items = [];
 				
@@ -61,7 +68,7 @@
 				var maxItems = items.length;
 				setInterval( function() {
 					if ( inEndLine ) {
-						if ( timeoutAfterEndLine < self.settings.typingDelay ) {
+						if ( timeoutAfterEndLine < typingDelay ) {
 							timeoutAfterEndLine++;
 							return;
 						}
@@ -96,7 +103,7 @@
 				var $currentItem = $children.eq( 0 );
 				var $nextItem = $children.eq( 1 );
 
-				if ( 'fade' === self.settings.effect ) {
+				if ( TRANSITION.FADE === self.settings.effect ) {
 					$currentItem.fadeOut( function() {
 						$nextItem.fadeIn();
 						$currentItem
@@ -104,7 +111,7 @@
 							.appendTo( $elem );
 					} );
 				}
-				else if ( 'slide' === self.settings.effect ) {
+				else if ( TRANSITION.SLIDE === self.settings.effect ) {
 					$currentItem.slideUp();
 					$nextItem.slideDown( function() {
 						$currentItem
