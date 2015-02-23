@@ -81,8 +81,8 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 		);
 
 		$this->_form_fields[] = array(
-			'id' => 'ticker_typing_delay',
-			'title' => __( 'Typing Delay', 'pojo-news-ticker' ),
+			'id' => 'ticker_typing_speed',
+			'title' => __( 'Typing Speed', 'pojo-news-ticker' ),
 			'std' => '50',
 			'desc' => __( 'For Typing effect only (in ms)', 'pojo-news-ticker' ),
 			'filter' => array( &$this, '_valid_number' ),
@@ -113,18 +113,6 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 		);
 		
 		$this->_form_fields[] = array(
-			'id' => 'link_to_post',
-			'title' => __( 'Link to Post:', 'pojo-news-ticker' ),
-			'type' => 'select',
-			'std' => 'yes',
-			'options' => array(
-				'yes' => __( 'Yes', 'pojo-news-ticker' ),
-				'no' => __( 'No', 'pojo-news-ticker' ),
-			),
-			'filter' => array( &$this, '_valid_by_options' ),
-		);
-
-		$this->_form_fields[] = array(
 			'id' => 'metadata_time',
 			'title' => __( 'Time:', 'pojo-news-ticker' ),
 			'type' => 'select',
@@ -132,6 +120,18 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'options' => array(
 				'hide' => __( 'Hide', 'pojo-news-ticker' ),
 				'show' => __( 'Show', 'pojo-news-ticker' ),
+			),
+			'filter' => array( &$this, '_valid_by_options' ),
+		);
+
+		$this->_form_fields[] = array(
+			'id' => 'link_to_post',
+			'title' => __( 'Link to Post:', 'pojo-news-ticker' ),
+			'type' => 'select',
+			'std' => 'yes',
+			'options' => array(
+				'yes' => __( 'Yes', 'pojo-news-ticker' ),
+				'no' => __( 'No', 'pojo-news-ticker' ),
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
