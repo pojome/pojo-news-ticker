@@ -111,6 +111,18 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
+		
+		$this->_form_fields[] = array(
+			'id' => 'link_to_post',
+			'title' => __( 'Link to Post:', 'pojo-news-ticker' ),
+			'type' => 'select',
+			'std' => 'yes',
+			'options' => array(
+				'yes' => __( 'Yes', 'pojo-news-ticker' ),
+				'no' => __( 'No', 'pojo-news-ticker' ),
+			),
+			'filter' => array( &$this, '_valid_by_options' ),
+		);
 
 		$this->_form_fields[] = array(
 			'id' => 'metadata_time',
@@ -255,7 +267,9 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 					<ul class="ticker-items" data-ticker_options='<?php echo json_encode( $ticker_options ); ?>'>
 				<?php while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
 					<li class="ticker-item">
+						<?php if ( 'yes' === $instance['link_to_post'] ) : ?>
 						<a class="ticker-link" href="<?php the_permalink(); ?>">
+						<?php endif; ?>
 							<?php if ( 'show' === $instance['metadata_date'] ) : ?>
 								<span class="ticker-date"><?php echo get_the_date(); ?></span>
 							<?php endif; ?>
@@ -264,7 +278,9 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 								<span class="ticker-time"><?php echo get_the_time(); ?></span>
 							<?php endif; ?>
 							<span class="ticker-content"><?php the_title(); ?></span>
+						<?php if ( 'yes' === $instance['link_to_post'] ) : ?>
 						</a>
+						<?php endif; ?>
 					</li>
 				<?php endwhile; ?>
 					</ul>
