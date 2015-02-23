@@ -3,9 +3,17 @@
  */
 
 ;(function ( $, window, document, undefined ) {
+	'use strict';
+	
+	var TRANSITION = {
+		FADE: 'fade',
+		SLIDE: 'slide',
+		TYPING: 'typing'
+	};
+	
 	var pluginName = "pojoNewsTicker",
 		defaults = {
-			effect: 'fade',
+			effect: TRANSITION.FADE,
 			delay: 2000,
 			pauseHover: true,
 			typingDelay: 50
@@ -37,12 +45,14 @@
 					} );
 			}
 			
-			if ( 'typing' === self.settings.effect ) {
-				var currentContentIndex = 0;
-				var currentItemIndex = 0;
-				var timeoutAfterEndLine = 0;
-				var inEndLine = false;
-				var items = [];
+			if ( TRANSITION.TYPING === self.settings.effect ) {
+				var currentContentIndex = 0,
+					currentItemIndex = 0,
+					timeoutAfterEndLine = 0,
+					typingDelay = parseInt( self.settings.delay / self.settings.typingDelay ),
+					inEndLine = false,
+					items = [];
+				
 				$children.each( function() {
 					var content = $( this ).html();
 					items.push( {
@@ -55,17 +65,16 @@
 					currentContentIndex = items[currentItemIndex].content.length;
 				} );
 				
-				var count = items.length;
+				var maxItems = items.length;
 				setInterval( function() {
 					if ( inEndLine ) {
-						if ( timeoutAfterEndLine < self.settings.typingDelay ) {
+						if ( timeoutAfterEndLine < typingDelay ) {
 							timeoutAfterEndLine++;
 							return;
 						}
-						timeoutAfterEndLine = 0;
-						currentContentIndex = 0;
+						timeoutAfterEndLine = currentContentIndex = 0;
 						currentItemIndex++;
-						if ( count === currentItemIndex ) {
+						if ( maxItems === currentItemIndex ) {
 							currentItemIndex = 0;
 						}
 						inEndLine = false;
@@ -81,7 +90,7 @@
 					if ( currentContentIndex > items[currentItemIndex].content.length ) {
 						inEndLine = true;
 					}
-				}, self.settings.delay );
+				}, self.settings.typingDelay );
 			}
 			
 			setInterval( function() {
@@ -93,7 +102,7 @@
 				var $currentItem = $children.eq( 0 );
 				var $nextItem = $children.eq( 1 );
 
-				if ( 'fade' === self.settings.effect ) {
+				if ( TRANSITION.FADE === self.settings.effect ) {
 					$currentItem.fadeOut( function() {
 						$nextItem.fadeIn();
 						$currentItem
@@ -101,7 +110,7 @@
 							.appendTo( $elem );
 					} );
 				}
-				else if ( 'slide' === self.settings.effect ) {
+				else if ( TRANSITION.SLIDE === self.settings.effect ) {
 					$currentItem.slideUp();
 					$nextItem.slideDown( function() {
 						$currentItem

@@ -76,7 +76,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'ticker_delay',
 			'title' => __( 'Delay', 'pojo-news-ticker' ),
 			'std' => '5000',
-			'desc' => __( 'Ticker will rotate every X milliseconds', 'pojo' ),
+			'desc' => __( 'Ticker will rotate every X milliseconds', 'pojo-news-ticker' ),
 			'filter' => array( &$this, '_valid_number' ),
 		);
 
@@ -84,7 +84,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'ticker_typing_delay',
 			'title' => __( 'Typing Delay', 'pojo-news-ticker' ),
 			'std' => '50',
-			'desc' => __( 'For Typing effect only (in ms)', 'pojo' ),
+			'desc' => __( 'For Typing effect only (in ms)', 'pojo-news-ticker' ),
 			'filter' => array( &$this, '_valid_number' ),
 		);
 		
@@ -111,6 +111,18 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
+		
+		$this->_form_fields[] = array(
+			'id' => 'link_to_post',
+			'title' => __( 'Link to Post:', 'pojo-news-ticker' ),
+			'type' => 'select',
+			'std' => 'yes',
+			'options' => array(
+				'yes' => __( 'Yes', 'pojo-news-ticker' ),
+				'no' => __( 'No', 'pojo-news-ticker' ),
+			),
+			'filter' => array( &$this, '_valid_by_options' ),
+		);
 
 		$this->_form_fields[] = array(
 			'id' => 'metadata_time',
@@ -133,7 +145,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 
 		$this->_form_fields[] = array(
 			'id' => 'content_color',
-			'title' => __( 'Color:', 'pojo' ),
+			'title' => __( 'Color:', 'pojo-news-ticker' ),
 			'type' => 'color',
 			'std' => '',
 			'filter' => 'sanitize_text_field',
@@ -141,14 +153,14 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 
 		$this->_form_fields[] = array(
 			'id' => 'content_font_size',
-			'title' => __( 'Font Size:', 'pojo' ),
+			'title' => __( 'Font Size:', 'pojo-news-ticker' ),
 			'placeholder' => '20px',
 			'std' => '',
 		);
 
 		$this->_form_fields[] = array(
 			'id' => 'content_font_weight',
-			'title' => __( 'Font Weight:', 'pojo' ),
+			'title' => __( 'Font Weight:', 'pojo-news-ticker' ),
 			'type' => 'select',
 			'std' => '',
 			'options' => $this->_get_font_weights(),
@@ -157,43 +169,43 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 
 		$this->_form_fields[ ] = array(
 			'id' => 'content_font_transform',
-			'title' => __( 'Text Transform:', 'pojo' ),
+			'title' => __( 'Text Transform:', 'pojo-news-ticker' ),
 			'type' => 'select',
 			'std' => '',
 			'options' => array(
-				'' => __( 'Default', 'pojo' ),
-				'none' => __( 'None', 'pojo' ),
-				'uppercase' => __( 'Uppercase', 'pojo' ),
-				'lowercase' => __( 'Lowercase', 'pojo' ),
-				'capitalize' => __( 'Capitalize', 'pojo' ),
+				'' => __( 'Default', 'pojo-news-ticker' ),
+				'none' => __( 'None', 'pojo-news-ticker' ),
+				'uppercase' => __( 'Uppercase', 'pojo-news-ticker' ),
+				'lowercase' => __( 'Lowercase', 'pojo-news-ticker' ),
+				'capitalize' => __( 'Capitalize', 'pojo-news-ticker' ),
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
 
 		$this->_form_fields[ ] = array(
 			'id' => 'content_font_style',
-			'title' => __( 'Font Style:', 'pojo' ),
+			'title' => __( 'Font Style:', 'pojo-news-ticker' ),
 			'type' => 'select',
 			'std' => '',
 			'options' => array(
-				'' => __( 'Default', 'pojo' ),
-				'normal' => __( 'Normal', 'pojo' ),
-				'italic' => __( 'Italic', 'pojo' ),
-				'oblique' => __( 'Oblique', 'pojo' ),
+				'' => __( 'Default', 'pojo-news-ticker' ),
+				'normal' => __( 'Normal', 'pojo-news-ticker' ),
+				'italic' => __( 'Italic', 'pojo-news-ticker' ),
+				'oblique' => __( 'Oblique', 'pojo-news-ticker' ),
 			),
 			'filter' => array( &$this, '_valid_by_options' ),
 		);
 
 		$this->_form_fields[] = array(
 			'id' => 'content_line_height',
-			'title' => __( 'Line Height:', 'pojo' ),
+			'title' => __( 'Line Height:', 'pojo-news-ticker' ),
 			'placeholder' => '30px',
 			'std' => '',
 		);
 
 		$this->_form_fields[] = array(
 			'id' => 'content_letter_spacing',
-			'title' => __( 'Letter Spacing:', 'pojo' ),
+			'title' => __( 'Letter Spacing:', 'pojo-news-ticker' ),
 			'placeholder' => '',
 			'std' => '',
 			'filter' => 'sanitize_text_field',
@@ -255,7 +267,9 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 					<ul class="ticker-items" data-ticker_options='<?php echo json_encode( $ticker_options ); ?>'>
 				<?php while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
 					<li class="ticker-item">
+						<?php if ( 'yes' === $instance['link_to_post'] ) : ?>
 						<a class="ticker-link" href="<?php the_permalink(); ?>">
+						<?php endif; ?>
 							<?php if ( 'show' === $instance['metadata_date'] ) : ?>
 								<span class="ticker-date"><?php echo get_the_date(); ?></span>
 							<?php endif; ?>
@@ -264,7 +278,9 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 								<span class="ticker-time"><?php echo get_the_time(); ?></span>
 							<?php endif; ?>
 							<span class="ticker-content"><?php the_title(); ?></span>
+						<?php if ( 'yes' === $instance['link_to_post'] ) : ?>
 						</a>
+						<?php endif; ?>
 					</li>
 				<?php endwhile; ?>
 					</ul>
