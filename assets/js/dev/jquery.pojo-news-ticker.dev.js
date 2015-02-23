@@ -72,8 +72,7 @@
 							timeoutAfterEndLine++;
 							return;
 						}
-						timeoutAfterEndLine = 0;
-						currentContentIndex = 0;
+						timeoutAfterEndLine = currentContentIndex = 0;
 						currentItemIndex++;
 						if ( maxItems === currentItemIndex ) {
 							currentItemIndex = 0;
