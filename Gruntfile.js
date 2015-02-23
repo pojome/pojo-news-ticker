@@ -115,9 +115,24 @@ module.exports = function( grunt ) {
 				],
 				tasks: [
 					'jshint',
-					'uglify'
+					'uglify',
+					'usebanner'
 				],
 				options: {}
+			}
+		},
+
+		usebanner: {
+			dist: {
+				options: {
+					banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+					'<%= grunt.template.today("dd-mm-yyyy") %> */'
+				},
+				files: {
+					src: [
+						'assets/js/app.min.js'
+					]
+				}
 			}
 		}
 		
@@ -128,6 +143,7 @@ module.exports = function( grunt ) {
 		'checktextdomain',
 		'pot',
 		'jshint',
-		'uglify'
+		'uglify',
+		'usebanner'
 	] );
 };
