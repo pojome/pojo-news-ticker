@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-news-ticker 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-19 17:41+0200\n"
+"POT-Creation-Date: 2015-02-23 07:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,127 +41,201 @@ msgid "Number Posts:"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:32
-msgid "Transition Style:"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:36
-msgid "Fade"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:37
-msgid "Slide"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:44
-msgid "Delay"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:51
-msgid "Stop On Hover:"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:55
-msgid "On"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:56
-msgid "Off"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:63
-msgid "Date:"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:67
-#: widgets/class-pojo-widget-news-ticker.php:79
-msgid "Show"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:68
-#: widgets/class-pojo-widget-news-ticker.php:80
-msgid "Hide"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:75
-msgid "Time:"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:87
-msgid "Advanced Options"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:94
 msgid "Order By:"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:98
+#: widgets/class-pojo-widget-news-ticker.php:36
 msgid "Date"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:99
+#: widgets/class-pojo-widget-news-ticker.php:37
 msgid "Menu Order"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:100
+#: widgets/class-pojo-widget-news-ticker.php:38
 msgid "Title"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:101
+#: widgets/class-pojo-widget-news-ticker.php:39
 msgid "Author"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:102
+#: widgets/class-pojo-widget-news-ticker.php:40
 msgid "Post Slug"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:103
+#: widgets/class-pojo-widget-news-ticker.php:41
 msgid "Modified"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:104
+#: widgets/class-pojo-widget-news-ticker.php:42
 msgid "Comment Count"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:105
+#: widgets/class-pojo-widget-news-ticker.php:43
 msgid "Post ID"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:106
+#: widgets/class-pojo-widget-news-ticker.php:44
 msgid "Random"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:107
+#: widgets/class-pojo-widget-news-ticker.php:45
+#: widgets/class-pojo-widget-news-ticker.php:165
 msgid "None"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:114
+#: widgets/class-pojo-widget-news-ticker.php:52
 msgid "Order:"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:118
+#: widgets/class-pojo-widget-news-ticker.php:56
 msgid "Descending"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:119
+#: widgets/class-pojo-widget-news-ticker.php:57
 msgid "Ascending"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:126
+#: widgets/class-pojo-widget-news-ticker.php:64
+msgid "Transition Style:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:68
+msgid "Fade"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:69
+msgid "Slide"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:70
+msgid "Typing"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:77
+msgid "Delay"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:79
+msgid "Ticker will rotate every X milliseconds"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:85
+msgid "Typing Delay"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:87
+msgid "For Typing effect only (in ms)"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:93
+msgid "Stop On Hover:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:97
+msgid "On"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:98
+msgid "Off"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:105
+msgid "Date:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:109
+#: widgets/class-pojo-widget-news-ticker.php:121
+msgid "Hide"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:110
+#: widgets/class-pojo-widget-news-ticker.php:122
+msgid "Show"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:117
+msgid "Time:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:129
+msgid "Style"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:136
+msgid "Color:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:144
+msgid "Font Size:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:151
+msgid "Font Weight:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:160
+msgid "Text Transform:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:164
+#: widgets/class-pojo-widget-news-ticker.php:179
+msgid "Default"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:166
+msgid "Uppercase"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:167
+msgid "Lowercase"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:168
+msgid "Capitalize"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:175
+msgid "Font Style:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:180
+msgid "Normal"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:181
+msgid "Italic"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:182
+msgid "Oblique"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:189
+msgid "Line Height:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:196
+msgid "Letter Spacing:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:204
 msgid "Custom"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:133
+#: widgets/class-pojo-widget-news-ticker.php:211
 msgid "News Ticker"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:134
-msgid "Display ticker posts by category"
+#: widgets/class-pojo-widget-news-ticker.php:212
+msgid "Display ticker posts by categories"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:190
+#: widgets/class-pojo-widget-news-ticker.php:275
 msgid "No posts found."
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:193
+#: widgets/class-pojo-widget-news-ticker.php:278
 msgid "Content not found. Please select a category."
 msgstr ""
