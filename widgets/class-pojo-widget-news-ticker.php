@@ -209,7 +209,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 		$this->_form_fields[] = array(
 			'id' => 'content_letter_spacing',
 			'title' => __( 'Letter Spacing:', 'pojo-news-ticker' ),
-			'placeholder' => '',
+			'placeholder' => '1px',
 			'std' => '',
 			'filter' => 'sanitize_text_field',
 		);	
