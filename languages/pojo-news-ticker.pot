@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-news-ticker 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-23 08:15+0200\n"
+"POT-Creation-Date: 2015-02-23 15:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,7 +122,7 @@ msgid "Ticker will rotate every X milliseconds"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:85
-msgid "Typing Delay"
+msgid "Typing Speed"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:87
@@ -146,29 +146,29 @@ msgid "Date:"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:109
-#: widgets/class-pojo-widget-news-ticker.php:133
+#: widgets/class-pojo-widget-news-ticker.php:121
 msgid "Hide"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:110
-#: widgets/class-pojo-widget-news-ticker.php:134
+#: widgets/class-pojo-widget-news-ticker.php:122
 msgid "Show"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:117
-msgid "Link to Post:"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:121
-msgid "Yes"
-msgstr ""
-
-#: widgets/class-pojo-widget-news-ticker.php:122
-msgid "No"
+msgid "Time:"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:129
-msgid "Time:"
+msgid "Link to Post:"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:133
+msgid "Yes"
+msgstr ""
+
+#: widgets/class-pojo-widget-news-ticker.php:134
+msgid "No"
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:141
