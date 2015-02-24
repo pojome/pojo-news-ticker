@@ -48,17 +48,20 @@ Would you like to like to contribute to Pojo News Ticker? You are more than welc
 <ol>
 	<li>Install using WordPress' built-in Add New Plugin installer</li>
 	<li>Activate the plugin through the 'Plugins' menu in WordPress</li>
+	<li>Go to the Builder tab in the Pages or Widgets menu</li>
+	<li>Drag and drop the widget and set it</li>
 	<li>Enjoy!</li>
 </ol>
 
 **Manual installation**
 <ol>
-	<li>Upload the plugin files to your plugins folder or install using the WordPress built-in installer</li>
-	<li>Activate the plugin</li>
+	<li>Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation</li>
+	<li>Activate the plugin through the 'Plugins' menu in WordPress</li>
 	<li>Go to the Builder tab in the Pages or Widgets menu</li>
-	<li>Drag and drop the widget and set it</li>
+    <li>Drag and drop the widget and set it</li>
 	<li>Enjoy!</li>
 </ol>
+
 
 == Changelog ==
 
