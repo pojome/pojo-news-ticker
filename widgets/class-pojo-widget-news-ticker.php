@@ -107,7 +107,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'metadata_date',
 			'title' => __( 'Date:', 'pojo-news-ticker' ),
 			'type' => 'select',
-			'std' => 'show',
+			'std' => 'hide',
 			'options' => array(
 				'hide' => __( 'Hide', 'pojo-news-ticker' ),
 				'show' => __( 'Show', 'pojo-news-ticker' ),
@@ -119,7 +119,7 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 			'id' => 'metadata_time',
 			'title' => __( 'Time:', 'pojo-news-ticker' ),
 			'type' => 'select',
-			'std' => 'show',
+			'std' => 'hide',
 			'options' => array(
 				'hide' => __( 'Hide', 'pojo-news-ticker' ),
 				'show' => __( 'Show', 'pojo-news-ticker' ),
