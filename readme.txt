@@ -40,7 +40,7 @@ In addition, you can add a date and time next to each post, the post’s duratio
 Would you like to like to contribute to Pojo News Ticker? You are more than welcome to submit your pull requests on the [GitHub repo][2]. Also, if you have any notes about the code, please open a ticket on ths issue tracker.
 
  [1]: http://pojo.me/?utm_source=wp-repo&utm_medium=link&utm_campaign=news_ticker
- [2]: https://github.com/pojome/pojo-lightbox
+ [2]: https://github.com/pojome/pojo-news-ticker
 
 == Installation ==
 
