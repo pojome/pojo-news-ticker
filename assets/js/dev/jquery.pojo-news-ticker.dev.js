@@ -55,7 +55,7 @@
 					items = [];
 				
 				$children.each( function() {
-					var content = '<li>' + $( this ).html() + '</li>';
+					var content = '<li class="ticker-item">' + $( this ).html() + '</li>';
 					items.push( {
 						html: content,
 						content: $( this ).find( 'span.ticker-content' ).text()
