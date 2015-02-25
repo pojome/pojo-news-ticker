@@ -1,8 +1,9 @@
 /*!
 * @author: Pojo Team
  */
+/* global jQuery */
 
-;(function ( $, window, document, undefined ) {
+;( function( $, window, document, undefined ) {
 	'use strict';
 	
 	var TRANSITION = {
@@ -28,7 +29,7 @@
 	}
 	
 	Plugin.prototype = {
-		init: function () {
+		init: function() {
 			var self = this,
 				$elem = self.$element,
 				$children = $elem.children();
@@ -122,7 +123,7 @@
 		}
 	};
 
-	$.fn[ pluginName ] = function ( options ) {
+	$.fn[ pluginName ] = function( options ) {
 		this.each( function() {
 			if ( ! $.data( this, "plugin_" + pluginName ) ) {
 				$.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
