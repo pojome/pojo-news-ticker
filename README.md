@@ -12,7 +12,7 @@ This plugin allows you to add a News Ticker widget to your WordPress site, of wh
 
 ## Description ##
 
-**Please Note:** This plugin is or [Pojo Framework][1] users only.
+**Please Note:** This plugin is for [Pojo Framework][1] users only.
 
 The News Ticker plugin adds a widget with which you can create Posts tickers with updates and news in every widget area of your WordPress site, or in the Builder. This plugin is especially useful for displaying news headlines in magazine and news websites.
 
@@ -48,7 +48,7 @@ Would you like to like to contribute to Pojo News Ticker? You are more than welc
 
 **Automatic installation**
 <ol>
-	<li>Install using WordPress' built-in Add New Plugin installer</li>
+	<li>Install using the WordPress built-in Plugin installer > Add New</li>
 	<li>Activate the plugin through the 'Plugins' menu in WordPress</li>
 	<li>Go to the Builder tab in the Pages or Widgets menu</li>
 	<li>Drag and drop the widget and set it</li>
