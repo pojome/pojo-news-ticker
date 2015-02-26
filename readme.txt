@@ -62,6 +62,10 @@ Would you like to like to contribute to Pojo News Ticker? You are more than welc
 	<li>Enjoy!</li>
 </ol>
 
+== Screenshots ==
+
+1. News Ticker Widget
+2. Style Options
 
 == Changelog ==
 

@@ -64,6 +64,14 @@ Would you like to like to contribute to Pojo News Ticker? You are more than welc
 	<li>Enjoy!</li>
 </ol>
 
+## Screenshots ##
+
+### 1. News Ticker Widget ###
+![News Ticker Widget](http://s.wordpress.org/extend/plugins/pojo-news-ticker/screenshot-1.png)
+
+### 2. Style Options ###
+![Style Options](http://s.wordpress.org/extend/plugins/pojo-news-ticker/screenshot-2.png)
+
 
 ## Changelog ##
 
