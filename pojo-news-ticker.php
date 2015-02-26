@@ -2,7 +2,7 @@
 /*
 Plugin Name: Pojo News Ticker
 Plugin URI: http://pojo.me/
-Description: Pojo news ticker plugin brings a easy to configure news ticker to on your WordPress site with Pojo Framework.
+Description: This plugin allows you to add a News Ticker widget to your WordPress site, of which works with Pojo Framework.
 Author: Pojo Team
 Author URI: http://pojo.me/
 Version: 1.0.0
