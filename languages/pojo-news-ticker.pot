@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-news-ticker 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-26 13:33+0200\n"
+"POT-Creation-Date: 2015-03-01 16:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,13 @@ msgstr ""
 msgid ""
 "<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "
 "activate any theme by Pojo before you are using \"Pojo News Ticker\" plugin."
+msgstr ""
+
+#: pojo-news-ticker.php:73
+#, php-format
+msgid ""
+"Your <a href=\"%s\" target=\"_blank\">Pojo Framework</a> isn't updated, "
+"please upgrade."
 msgstr ""
 
 #: widgets/class-pojo-widget-news-ticker.php:11
