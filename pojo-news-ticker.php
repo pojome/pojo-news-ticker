@@ -5,7 +5,7 @@ Plugin URI: http://pojo.me/
 Description: Pojo news ticker plugin brings a easy to configure news ticker to on your WordPress site with Pojo Framework.
 Author: Pojo Team
 Author URI: http://pojo.me/
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: pojo-news-ticker
 Domain Path: /languages/
 */
