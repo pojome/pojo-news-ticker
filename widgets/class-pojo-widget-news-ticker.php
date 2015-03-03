@@ -230,7 +230,6 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 
 	public function widget( $args, $instance ) {
 		$instance = wp_parse_args( $instance, $this->_get_default_values() );
-		$args = $this->_parse_widget_args( $args, $instance );
 
 		$query_args = array(
 			'post_type' => 'post',

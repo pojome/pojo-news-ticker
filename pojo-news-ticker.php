@@ -80,7 +80,7 @@ final class Pojo_News_Ticker {
 			return;
 		}
 
-		if ( version_compare( '1.2.1', Pojo_Core::instance()->get_version(), '>' ) ) {
+		if ( version_compare( '1.2.0', Pojo_Core::instance()->get_version(), '>' ) ) {
 			add_action( 'admin_notices', array( &$this, 'print_update_error' ) );
 			return;
 		}
