@@ -266,12 +266,14 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 				
 				$style = $this->_get_inline_styles( 'content', $instance );
 				?>
-				<div class="pojo-news-ticker"<?php if ( ! empty( $style ) ) echo ' style="' . $style . '"'; ?>>
+				<div class="pojo-news-ticker">
 					<ul class="ticker-items" data-ticker_options='<?php echo json_encode( $ticker_options ); ?>'>
 				<?php while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
 					<li class="ticker-item">
 						<?php if ( 'yes' === $instance['link_to_post'] ) : ?>
-						<a class="ticker-link" href="<?php the_permalink(); ?>">
+						<a class="ticker-link" href="<?php the_permalink(); ?>"<?php if ( ! empty( $style ) ) echo ' style="' . $style . '"'; ?>>
+						<?php else : ?>
+						<span<?php if ( ! empty( $style ) ) echo ' style="' . $style . '"'; ?>>
 						<?php endif; ?>
 							<?php if ( 'show' === $instance['metadata_date'] ) : ?>
 								<span class="ticker-date"><?php echo get_the_date(); ?></span>
@@ -283,6 +285,8 @@ class Pojo_Widget_News_Ticker extends Pojo_Widget_Base {
 							<span class="ticker-content"><?php the_title(); ?></span>
 						<?php if ( 'yes' === $instance['link_to_post'] ) : ?>
 						</a>
+						<?php else : ?>
+						</span>
 						<?php endif; ?>
 					</li>
 				<?php endwhile; ?>
