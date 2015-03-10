@@ -69,6 +69,9 @@ Would you like to like to contribute to Pojo News Ticker? You are more than welc
 
 == Changelog ==
 
+= 1.0.2 =
+* Tweak! - Better widget styles with typo effect
+
 = 1.0.1 =
 * Tweak! - Print error for old themes
 
