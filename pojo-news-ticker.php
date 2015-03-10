@@ -5,7 +5,7 @@ Plugin URI: http://pojo.me/
 Description: This plugin allows you to add a News Ticker widget to your WordPress site, of which works with Pojo Framework.
 Author: Pojo Team
 Author URI: http://pojo.me/
-Version: 1.0.1
+Version: 1.0.2
 Text Domain: pojo-news-ticker
 Domain Path: /languages/
 */

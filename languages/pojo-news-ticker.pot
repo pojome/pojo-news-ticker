@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-news-ticker 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 16:18+0200\n"
+"POT-Creation-Date: 2015-03-10 14:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -251,10 +251,10 @@ msgstr ""
 msgid "Display ticker posts by categories"
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:294
+#: widgets/class-pojo-widget-news-ticker.php:298
 msgid "No posts found."
 msgstr ""
 
-#: widgets/class-pojo-widget-news-ticker.php:297
+#: widgets/class-pojo-widget-news-ticker.php:301
 msgid "Content not found. Please select a category."
 msgstr ""
