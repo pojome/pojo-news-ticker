@@ -55,7 +55,7 @@ final class Pojo_News_Ticker {
 		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'pojo-news-ticker' ), '1.0.0' );
 	}
 
-	/**cd
+	/**
 	 * @return Pojo_News_Ticker
 	 */
 	public static function instance() {
