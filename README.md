@@ -1,10 +1,10 @@
 # Pojo News Ticker #
-[![Dependency Status](https://david-dm.org/pojome/pojo-news-ticker/dev-status.svg)](https://david-dm.org/pojome/pojo-news-ticker#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Dependency Status](https://david-dm.org/pojome/pojo-news-ticker/dev-status.svg)](https://david-dm.org/pojome/pojo-news-ticker#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 **Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** news ticker, headline news, headline ticker, news, rotate ticker, ticker, typing, slide, fade,  
 **Requires at least:** 4.1  
-**Tested up to:** 4.1  
+**Tested up to:** 4.5.2  
 **Stable tag:** 1.0.2  
 **License:** GPLv2 or later  
 
@@ -74,6 +74,9 @@ Would you like to like to contribute to Pojo News Ticker? You are more than welc
 
 
 ## Changelog ##
+
+### 1.0.3 ###
+* Tweak! - Pojo advanced widget title link supported
 
 ### 1.0.2 ###
 * Tweak! - Better widget styles with typo effect

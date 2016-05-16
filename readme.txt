@@ -2,7 +2,7 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: news ticker, headline news, headline ticker, news, rotate ticker, ticker, typing, slide, fade,
 Requires at least: 4.1
-Tested up to: 4.1
+Tested up to: 4.5.2
 Stable tag: 1.0.2
 License: GPLv2 or later
 
@@ -68,6 +68,9 @@ Would you like to like to contribute to Pojo News Ticker? You are more than welc
 2. Style Options
 
 == Changelog ==
+
+= 1.0.3 =
+* Tweak! - Pojo advanced widget title link supported
 
 = 1.0.2 =
 * Tweak! - Better widget styles with typo effect
