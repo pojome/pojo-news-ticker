@@ -2,7 +2,7 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: news ticker, headline news, headline ticker, news, rotate ticker, ticker, typing, slide, fade,
 Requires at least: 4.1
-Tested up to: 5.9
+Tested up to: 6.0
 Stable tag: 1.0.3
 License: GPLv2 or later
 
